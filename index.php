@@ -11,7 +11,7 @@
   <title>O'cto Chat</title>
 </head>
 <body>
-  <iframe src="conversation.php" name="conversation"></iframe>
-  <iframe src="form_reg" name="form_reg"></iframe>
+  <iframe src="messages.php" name="messages"></iframe>
+  <iframe src="form_reg" name="register"></iframe>
 </body>
 </html>
