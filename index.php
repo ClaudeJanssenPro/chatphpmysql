@@ -1,5 +1,6 @@
 <?php
-
+// °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
+require "php/funcvar.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,10 +9,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/phpchatdb_style.css" charset="utf-8" />
   <title>O'cto Chat</title>
 </head>
 <body>
-  <iframe src="messages.php" name="messages"></iframe>
-  <iframe src="form_reg" name="register"></iframe>
+  <iframe src="php/messages.php" name="messages"></iframe>
+  <iframe src="php/form_reg" name="register"></iframe>
 </body>
 </html>

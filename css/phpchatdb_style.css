@@ -1,0 +1,12 @@
+/*
+https://code.tutsplus.com/tutorials/create-a-sticky-note-effect-in-5-easy-steps-with-css3-and-html5--net-13934
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Reenie Beanie', cursive;
+*/
+body {
+  background-color: #8899a5;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
