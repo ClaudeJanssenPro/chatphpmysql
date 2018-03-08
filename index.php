@@ -1,6 +1,12 @@
 <?php
 // °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
-require "php/funcvar.php";
+
+// °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
+// require "php/toolbox.php";
+// °°°°°°°°°°°°°°°°°°°°°°°°°° Session °°°°°°°°°°°°°°°°°°°°°°°°°°
+session_start();
+$_SESSION['login'] = 'visiteur';
+ echo $_SESSION['login'];
 ?>
 
 <!DOCTYPE html>

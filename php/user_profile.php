@@ -1,6 +1,6 @@
 <?php
 // °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
-require "php/funcvar.php";
+require "php/toolbox.php";
 ?>
 
 <!DOCTYPE html>

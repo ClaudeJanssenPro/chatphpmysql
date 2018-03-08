@@ -1,6 +1,7 @@
 <?php
 // °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
-require "php/funcvar.php";
+require "php/toolbox.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
