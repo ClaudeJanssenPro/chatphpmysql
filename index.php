@@ -5,6 +5,7 @@
 // require "php/toolbox.php";
 // °°°°°°°°°°°°°°°°°°°°°°°°°° Session °°°°°°°°°°°°°°°°°°°°°°°°°°
 session_start();
+require('connection.php');
 $_SESSION['login'] = 'visiteur';
  echo $_SESSION['login'];
 ?>
@@ -19,7 +20,7 @@ $_SESSION['login'] = 'visiteur';
   <title>O'cto Chat</title>
 </head>
 <body>
-  <iframe src="php/messages.php" name="messages"></iframe>
-  <iframe src="php/form_reg" name="register"></iframe>
+  <iframe src="php/display.php" name="messages"></iframe>
+  <iframe src="php/form_reg.php" name="register"></iframe>
 </body>
 </html>
