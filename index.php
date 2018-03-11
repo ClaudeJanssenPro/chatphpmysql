@@ -21,6 +21,6 @@ $_SESSION['login'] = 'visiteur';
 </head>
 <body>
   <iframe src="php/display.php" name="messages"></iframe>
-  <iframe src="php/form_reg.php" name="register"></iframe>
+  <iframe src="php/register.php" name="register"></iframe>
 </body>
 </html>

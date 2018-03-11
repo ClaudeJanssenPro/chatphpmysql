@@ -1,5 +1,5 @@
 <?php
-// °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
+require "php/debug.php";
 require "php/toolbox.php";
 ?>
 

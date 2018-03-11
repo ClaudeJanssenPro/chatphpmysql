@@ -1,19 +1,4 @@
 <?php
-// °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
-// OK Upload DB on GitHub
-// !!!Pick Up Your Debug Code On Your Way Out!!!!
-// °°°°°°°°°°°°°°°°°°°°°°°°°° Debug °°°°°°°°°°°°°°°°°°°°°°°°°°
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-// °°°°°°°°°°°°°°°°°°°°°°°°°° DB HookUp °°°°°°°°°°°°°°°°°°°°°°°°°°
-// try
-// {
-//   $db = new PDO('mysql:host=localhost;dbname=phpchat;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-// }
-// catch(Exception $e)
-// {
-//   die('Erreur : '.$e->getMessage());
-// }
 // °°°°°°°°°°°°°°°°°°°°°°°°°° User registration °°°°°°°°°°°°°°°°°°°°°°°°°°
 if (isset($_POST['btn_reg'])){
   $email = trim($_POST['email_reg']);
