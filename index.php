@@ -1,17 +1,8 @@
 <?php
-// °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
-
-// °°°°°°°°°°°°°°°°°°°°°°°°°° ToDO °°°°°°°°°°°°°°°°°°°°°°°°°°
-// require "php/toolbox.php";
-// °°°°°°°°°°°°°°°°°°°°°°°°°° Session °°°°°°°°°°°°°°°°°°°°°°°°°°
-session_start();
-require('connection.php');
-$_SESSION['login'] = 'visiteur';
- echo $_SESSION['login'];
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +11,7 @@ $_SESSION['login'] = 'visiteur';
   <title>O'cto Chat</title>
 </head>
 <body>
+  <iframe src="php/loginout.php" name="login"></iframe>
   <iframe src="php/display.php" name="messages"></iframe>
-  <iframe src="php/register.php" name="register"></iframe>
 </body>
 </html>

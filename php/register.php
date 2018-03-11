@@ -1,12 +1,10 @@
 <?php
 // °°°°°°°°°°°°°°°°°°°°°°°°°° DB Connect °°°°°°°°°°°°°°°°°°°°°°°°°°
-require_once('debug.php');
 require_once('dbco.php');
 // °°°°°°°°°°°°°°°°°°°°°°°°°° User registration °°°°°°°°°°°°°°°°°°°°°°
 if (isset($_POST['btn_reg'])){
   $email_r = trim($_POST['email_reg']);
   $email_r = filter_var($_POST['email_reg'], FILTER_VALIDATE_EMAIL);
-  // °°°check if not duplicate SELECT count(*), locations.* FROM locations GROUP BY number HAVING COUNT(*) > 1°°°
   $password_r = $_POST['pass_reg'];
   $hashed_password = password_hash($password_r, PASSWORD_DEFAULT);
     if (!empty($email_r)&&!empty($password_r)) {
@@ -18,6 +16,7 @@ if (isset($_POST['btn_reg'])){
       $email_r,
       $hashed_password
     ]);
+    header("location: loginout.php");
   }
   unset($add_user);
 }

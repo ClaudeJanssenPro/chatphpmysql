@@ -2,7 +2,7 @@
 // °°°°°°°°°°°°°°°°°°°°°°°°°° Imports && Session °°°°°°°°°°°°°°°°°°°°°°°°°°
 require_once('debug.php');
 require_once('dbco.php');
-// °°°°°°°°°°°°°°°°°°°°°°°°°° User registration °°°°°°°°°°°°°°°°°°°°°°
+// °°°°°°°°°°°°°°°°°°°°°°°°°° Login && session start °°°°°°°°°°°°°°°°°°°°°°
 if (isset($_POST['btn_login'])){
   $email_l = trim($_POST['email_login']);
   $email_l = filter_var($_POST['email_login'], FILTER_VALIDATE_EMAIL);
@@ -12,11 +12,17 @@ if (isset($_POST['btn_login'])){
   $known = $verifemail->fetch();
   if ($known && password_verify($_POST['pass_login'], $known['pass']))
   {
-      echo "valid!";
-  } else {
-      echo "invalid";
+    session_start();
+    $_SESSION['email'] = $email_l;
+    header("location: logout.php");
   }
+  // else {
+  //   echo $password_err;
+  // }
 }
+  unset($verifemail);
+// °°°°°°°°°°°°°°°°°°°°°°°°°° DB DisConnect °°°°°°°°°°°°°°°°°°°°°°°°°°
+unset($db);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,13 +34,15 @@ if (isset($_POST['btn_login'])){
 </head>
   <body>
     <fieldset>
-      <form class="register_form" action="" method="post"  autocomplete="off">
-        <h2 class="register_form_title">Bonjour O'ctochat,</h2>
+      <form class="login_form" action="" method="post"  autocomplete="off">
+        <h2 class="login_form_title">Bonjour O'ctochat,</h2></br>
+        <strong>je voudrais participer,</h2></br>
         <label for="email_login">mon email est</label>
-        <input type="email" name="email_login" placeholder="(rappelle-nous ton email ici)" required>
+        <input type="email" name="email_login" placeholder="(ton email ici)" required></br>
         <label for="pass_login">et mon mot de passe est</label>
-        <input type="password" name="pass_login" placeholder="(rappelle-nous ton mot de passe ici)" required>
+        <input type="password" name="pass_login" placeholder="(ton mot de passe ici)" required></br>
         <button name="btn_login" type="submit">Connecte-moi s'il-te-plaît</button>
+        <p>Pas encore enregistrée? <a href="register.php">Faisons connaissance maintenant</a>.</p>
       </form>
     </fieldset>
   </body>
