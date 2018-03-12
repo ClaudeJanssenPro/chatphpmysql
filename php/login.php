@@ -1,6 +1,5 @@
 <?php
-// °°°°°°°°°°°°°°°°°°°°°°°°°° Imports && Session °°°°°°°°°°°°°°°°°°°°°°°°°°
-require_once('debug.php');
+// °°°°°°°°°°°°°°°°°°°°°°°°°° DB Connect °°°°°°°°°°°°°°°°°°°°°°°°°°
 require_once('dbco.php');
 // °°°°°°°°°°°°°°°°°°°°°°°°°° Login && session start °°°°°°°°°°°°°°°°°°°°°°
 if (isset($_POST['btn_login'])){

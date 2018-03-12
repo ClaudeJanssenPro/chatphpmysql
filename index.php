@@ -11,7 +11,8 @@
   <title>O'cto Chat</title>
 </head>
 <body>
-  <iframe src="php/loginout.php" name="login"></iframe>
+  <iframe src="php/login.php" name="login"></iframe>
   <iframe src="php/display.php" name="messages"></iframe>
+  <iframe src="php/write.php" name="writer"></iframe>
 </body>
 </html>

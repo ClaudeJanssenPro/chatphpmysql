@@ -5,20 +5,33 @@ require_once('dbco.php');
 if (isset($_POST['btn_reg'])){
   $email_r = trim($_POST['email_reg']);
   $email_r = filter_var($_POST['email_reg'], FILTER_VALIDATE_EMAIL);
-  $password_r = $_POST['pass_reg'];
-  $hashed_password = password_hash($password_r, PASSWORD_DEFAULT);
-    if (!empty($email_r)&&!empty($password_r)) {
-    $add_user = $db->prepare('
-      INSERT INTO users (email, pass)
-      VALUES (?, ?)
-    ');
-    $add_user->execute([
-      $email_r,
-      $hashed_password
-    ]);
-    header("location: loginout.php");
-  }
-  unset($add_user);
+  $unique = $db->query('SELECT count(*) FROM users WHERE email ="'.$email_r.'"');
+  $duplicate = $unique->fetch();
+  print_r ($duplicate);
+
+
+  // // Check if email is taken
+  // $stmt = $db->prepare("SELECT COUNT(*) FROM `users` WHERE `email` = :email");
+  // $stmt->execute(array('email' => $_POST['email']));
+  // if ($stmt->fetchColumn() > 0) {
+  //   throw new Exception("That email is already taken.");
+  // }
+
+
+    // $password_r = $_POST['pass_reg'];
+  // $hashed_password = password_hash($password_r, PASSWORD_DEFAULT);
+  //   if (!empty($email_r)&&!empty($password_r)) {
+  //   $add_user = $db->prepare('
+  //     INSERT INTO users (email, pass)
+  //     VALUES (?, ?)
+  //   ');
+  //   $add_user->execute([
+  //     $email_r,
+  //     $hashed_password
+  //   ]);
+  //   header("location: login.php");
+  // }
+  // unset($add_user);
 }
 // °°°°°°°°°°°°°°°°°°°°°°°°°° DB DisConnect °°°°°°°°°°°°°°°°°°°°°°°°°°
 unset($db);

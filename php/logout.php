@@ -4,8 +4,7 @@ if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
   header("location: login.php");
   exit;
 }
-
-if (isset($_POST['btn_login'])){
+if (isset($_POST['btn_logout'])){
   session_start();
   $_SESSION = array();
   session_destroy();
@@ -24,10 +23,10 @@ if (isset($_POST['btn_login'])){
 </head>
 <body>
   <div class="page-header">
-      <h1>Hi, <b><?php echo htmlspecialchars($_SESSION['email']); ?></b>. Welcome to our site.</h1>
+      <h1>Bienvenu <?= htmlspecialchars($_SESSION['email']); ?>.</h1>
   </div>
-  <form class="logout_form" action="" method="post"  autocomplete="off">
-    <p><input type="submit" name="logout" value="Déconnecte-moi"></p>
+  <form class="logout_form" action="" method="post" autocomplete="off">
+    <p><input type="submit" name="btn_logout" value="Déconnecte-moi s'il-te-plaît."></p>
   </form>
 </body>
 </html>
