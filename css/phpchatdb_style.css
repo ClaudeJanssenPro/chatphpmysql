@@ -5,8 +5,20 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Reenie Beanie', cursive;
 */
 body {
-  background-color: #8899a5;
+  background-color: #63C3D1;
   display: flex;
   justify-content: center;
   margin-top: 5vh;
+}
+div {
+  line-height: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding:15px;
+  /* border-radius: 4px; */
+  /* border:1px solid #E8E8E8; */
+  border-top:60px solid #fdfd86;
+  box-sizing: border-box;
+  background:#16232E;
 }
